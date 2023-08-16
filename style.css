@@ -1,68 +1,134 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Font Awesome 5 Free','Poppins',sans-serif,SAP-icons, 
-  /* ; font-weight: 900; */
-}
-h2{text-align:center}
-a{text-decoration:none}
-.btn{
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 95px;
-  width: 360px;
-  background: #3A89EB;
-  border-radius: 55px;
+.button{
+  border: none;
+  background:#3A89EB;
+  color:white;
+  padding: 10px 16px;
   cursor: pointer;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  position: relative;
+  font-family:sans-serif;
   overflow: hidden;
+  border-radius: 5px;
+  min-width: 400px;
+  min-height: 96px;
+  font-family: "Fira Sans", sans-serif;
 }
-.btn.active{
-  height: 20px;
-  width: 500px;
-}
-.btn::before{
-  content: "";
+
+.button__progress{
   position: absolute;
+  height: 100%;
+  width: 0%;
+  background: rgba(0, 0, 0, 0.2);
+  transition: width 0.3s;
   top: 0;
-  left: -100%;
-  height: 100%;
-  width: 100%;
-  background: #11c62c;
-  border-radius: 55px;
-  transition: all 6s ease-in-out;
+  left: 0;
 }
-.btn.active::before{
-  animation: layer 6s ease-in-out forwards;
-}
-@keyframes layer {
-  100%{
-    left: 0%;
-  }
-}
-.btn .soft{
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.2s ease;
-  transition-delay: 0.2s;
-}
-.btn.active .soft{
-  transform: translateY(60px);
-}
-.btn .soft i,
-.btn .soft .btn-text{
-  color: #fff;
-  font-size: 40px;
-  font-weight: 500;
-}
-.btn .soft .btn-text{
+
+.button__text{
+  position: relative;
   font-size: 28px;
-  margin-left: 8px;
+}
+
+/* branding */
+
+.branding-container {
+  padding-top: 5px;
+  position: relative;
+  /* right: 70%; */
+  font-family: Arial,Helvetica,sans-serif;
+  text-align: center;
+  line-height: 20px
+}
+
+.branding-container .bns-branding {
+  font-size: 20px;
+  color: #999;
+  text-decoration: none;
+  display: inline-block
+}
+
+.branding-container .bns-branding .bns {
+  font-weight: bold;
+  color: #0d2cdb
+}
+
+/* modal view */
+
+/* The Modal (background) */
+.modal {
+display: none; /* Hidden by default */
+position: fixed; /* Stay in place */
+z-index: 1; /* Sit on top */
+left: 0;
+top: 0;
+width: 100%; /* Full width */
+height: 100%; /* Full height */
+overflow: auto; /* Enable scroll if needed */
+background-color: rgb(0,0,0); /* Fallback color */
+background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+-webkit-animation-name: fadeIn; /* Fade in the background */
+-webkit-animation-duration: 0.4s;
+animation-name: fadeIn;
+animation-duration: 0.4s
+}
+
+/* Modal Content */
+.modal-content {
+position: fixed;
+bottom: 0;
+background-color: #fefefe;
+width: 100%;
+-webkit-animation-name: slideIn;
+-webkit-animation-duration: 0.4s;
+animation-name: slideIn;
+animation-duration: 0.4s
+}
+
+/* The Close Button */
+.close {
+color: white;
+float: right;
+font-size: 28px;
+font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+color: #000;
+text-decoration: none;
+cursor: pointer;
+}
+
+.modal-header {
+padding: 2px 16px;
+background-color: #5cb85c;
+color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+padding: 2px 16px;
+background-color: #5cb85c;
+color: white;
+}
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+from {bottom: -300px; opacity: 0} 
+to {bottom: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+from {bottom: -300px; opacity: 0}
+to {bottom: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+from {opacity: 0} 
+to {opacity: 1}
+}
+
+@keyframes fadeIn {
+from {opacity: 0} 
+to {opacity: 1}
 }

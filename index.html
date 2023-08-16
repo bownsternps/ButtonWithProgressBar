@@ -1,29 +1,37 @@
-<head>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://kit.fontawesome.com/86b83f94db.js" crossorigin="anonymous"></script>
-  <script data-id="sap-ui-config" type="application/json">
-		{
-			"language": "EN",
-			"xx-wc-size-compact": false
-		}
-	</script>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <button type="button" class="button" id="button" data-progress-text="processing..." data-complete-text="completed!">
+      <div class="button__progress"></div>
+      <span class="button__text">Get Process Order</span>
+    </button>
+     <!-- branding powered by -->
 
-</head>
-
-<body>
-  <div class="btn">
-    <div class="soft">
-      <!-- <i class="fa-regular fa-database"></i> -->
-      <i class=
-      sap-icon://sap-logo-shape> </i>
-      <a href="#"> <span class="btn-text">Get Ops</span></a>
+     <div class="branding-container">
+      <a href="https://www.bownsternps.com/" target="_blank" class="bns-branding">
+        powered by <span class="bns">Bow&Stern</span>
+      </a>
     </div>
-       
-  </div>
-  <div>
-    <ui5-icon name="female" class="icon-red"></ui5-icon>
+  
+  <!-- modal for testing purposes -->  
+
+  <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+          <div class="modal-header">
+              <span class="close">&times;</span>
+              <h3 id="fireEventType"></h3>
+          </div>
+          <div class="modal-body">
+              <p id="fireEventText"></p>
+          </div>
+        
+      </div>
   </div>
   <script src="script.js"></script>
-  
-  <!-- <script src="https://kit.fontawesome.com/86b83f94db.js" crossorigin="anonymous"></script> -->
-</body>
+  </body>
+
+</html>
