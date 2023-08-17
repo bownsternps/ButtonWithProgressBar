@@ -32,7 +32,7 @@ function setButtonProgress(button, percent) {
 // setup
 const btn = document.querySelector(".button");
 const btnProgress = document.querySelector(".button__progress");
-const propValues = {
+const propsValues = {
   station: "",
   title:"",
   btnBackgroundColor: "",
@@ -41,18 +41,18 @@ const propValues = {
   errorValue: "",
 }
 
-for (var key in propValues) {
-  propValues[key] = getValue(key);
-  if (propValues[key] == "") {
+for (var key in propsValues) {
+  propsValues[key] = getValue(key);
+  if (propsValues[key] == "") {
      fireEvent("Error", key +" input value is missing" )
   }
 }
 var currentStep = 0;
-btn.setAttribute("data-ready-text", propValues.title);
-btn.style.background = propValues.btnBackgroundColor;
-btnProgress.style.background = propValues.btnProgressColor;
-console.log("Changed the colors to: " + propValues.btnProgressColor);
-console.log(propValues);
+btn.setAttribute("data-ready-text", propsValues.title);
+btn.style.background = propsValues.btnBackgroundColor;
+btnProgress.style.background = propsValues.btnProgressColor;
+console.log("Changed the colors to: " + propsValues.btnProgressColor);
+console.log(propsValues);
 
 
 

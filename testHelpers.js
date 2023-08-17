@@ -3,7 +3,7 @@
 ////////////////////////////////////////////////////////////
 
 function getValue(prop) {
-    // const propValues = {
+    // const propsValues = {
     //     station: "",
     //     title: "",
     //     btnBackgroundColor: "",
