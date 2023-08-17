@@ -1,21 +1,19 @@
 
 
-function incrementBar() {
-  currentStep++;
-  document.getElementById('bar').setAttribute("style", `width:${currentStep / loopList.length * 100}%`);
-
-}
-
 function resetBar() {
   setButtonProgress(btn,0);
 }
+function incrementBar() {
+  currentStep++;
+  document.getElementById('bar').setAttribute("style", `width:${currentStep / loopList.length * 100}%`);
+}
+
 
 
 function setButtonProgress(button, percent) {
   console.log("in setButtonProgress. percent is:", percent);
   var textElement = button.querySelector(".button__text");
-  button.querySelector(".button__progress").style.width = `${percent}%`;
-  
+  button.querySelector(".button__progress").style.width = `${percent}%`; 
   
   if (percent == 0) {
     textElement.textContent = button.dataset.readyText

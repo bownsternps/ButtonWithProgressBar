@@ -2,7 +2,6 @@
 // START: that section is only needed when running outside of Tulip 
 ////////////////////////////////////////////////////////////
 
-// function getValue(prop, callback) {
 function getValue(prop) {
     // const propValues = {
     //     station: "",
