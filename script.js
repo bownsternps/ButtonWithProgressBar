@@ -1,6 +1,15 @@
 
 
-const btn = document.querySelector(".button");
+function incrementBar() {
+  currentStep++;
+  document.getElementById('bar').setAttribute("style", `width:${currentStep / loopList.length * 100}%`);
+
+}
+
+function resetBar() {
+  setButtonProgress(btn,0);
+}
+
 
 function setButtonProgress(button, percent) {
   console.log("in setButtonProgress. percent is:", percent);
@@ -22,22 +31,34 @@ function setButtonProgress(button, percent) {
 
   }
 }
-
-let station,title = "";
-
-station = getValue('station');
-if (station == "") {
-  fireEvent("Error", "No station provided")
+// setup
+const btn = document.querySelector(".button");
+const btnProgress = document.querySelector(".button__progress");
+const propValues = {
+  station: "",
+  title:"",
+  btnBackgroundColor: "",
+  btnProgressColor: "",
+  successValue: "",
+  errorValue: "",
 }
 
+for (var key in propValues) {
+  propValues[key] = getValue(key);
+  if (propValues[key] == "") {
+     fireEvent("Error", key +" input value is missing" )
+  }
+}
 var currentStep = 0;
-function incrementBar() {
-  currentStep++;
-  document.getElementById('bar').setAttribute("style", `width:${currentStep / loopList.length * 100}%`);
+btn.setAttribute("data-ready-text", propValues.title);
+btn.style.background = propValues.btnBackgroundColor;
+btnProgress.style.background = propValues.btnProgressColor;
+console.log("Changed the colors to: " + propValues.btnProgressColor);
+console.log(propValues);
 
-}
 
-function resetBar() {
-  setButtonProgress(btn,0);
-}
+
+
+
+
 
