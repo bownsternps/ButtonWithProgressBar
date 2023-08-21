@@ -1,4 +1,10 @@
+body {
+  width:100%;
+}
 .button{
+  display: table;
+  margin: 0 auto;
+  border: 0.05em solid red;
   border: none;
   /* background:#3A89EB; */
   color:white;
@@ -8,11 +14,11 @@
   font-family:sans-serif;
   overflow: hidden;
   border-radius: 5px;
-  min-width: 400px;
+  min-width: 300px;
   min-height: 96px;
   font-family: "Fira Sans", sans-serif;
 }
-
+ 
 .button__progress{
   position: absolute;
   height: 100%;

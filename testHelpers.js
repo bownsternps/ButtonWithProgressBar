@@ -2,17 +2,11 @@
 // START: that section is only needed when running outside of Tulip 
 ////////////////////////////////////////////////////////////
 
-function getValue(prop) {
-    // const propsValues = {
-    //     station: "",
-    //     title: "",
-    //     btnBackgroundColor: "",
-    //     btnProgressColor: "",
-    //     successValue: "",
-    //     errorValue: "",
-    //   }    
-
+function getValue(prop) { 
     switch (prop) {
+        case 'serviceID':
+            return "001"
+            break;
         case 'station':
             return { "id": "iJqBRzjCHSXEyDTXx" };
             break;
