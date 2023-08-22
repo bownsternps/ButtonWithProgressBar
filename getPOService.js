@@ -37,7 +37,9 @@ class GetPOService extends Service {
     super(serviceName);
     // overwrite this one for the different steps in your service
     this.steps = ["1. get station", "2. get plant", "3. get service", "4. get service profile", "5. get profile Mapping", "6. get service profile Mapping function"];
-    console.log("GetPOService is not defined");
+    console.log("GetPOService is defined");
+    console.log("this", this)
+
   }
 
   getValues() {
@@ -47,8 +49,9 @@ class GetPOService extends Service {
   }
 
   async execute() {
-
-    ///////////////////////////////////////
+    try {
+      
+      ///////////////////////////////////////
     //   // 1. get station
     ///////////////////////////////////////
     this.stationFilter = new Filter(tableFieldNames["config.stations.stationID"], FunctionTypes.equal, this.inputs.station["id"])
@@ -183,6 +186,12 @@ class GetPOService extends Service {
       this.resetBar(0);
     // }
 
+    } catch (error) {
+      console.log("error => ", error);
+      fireEvent("error",error);
+    }
+
+    
 
   }
 

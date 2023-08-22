@@ -14,13 +14,14 @@ class Service {
     errorValue: "",
   }
   constructor(serviceName) {
-    
+    console.log(" I am at service constructor");
     this.getValues(); 
     this.name = serviceName;
     this.btn = document.querySelector(".button");
     this.btnProgress = document.querySelector(".button__progress");
     this.currentStep = 0;
     this.btn.setAttribute("data-ready-text", this.inputs.title);
+    console.log(this.inputs.title);
     this.btn.style.background = this.inputs.btnBackgroundColor;
     this.btnProgress.style.background = this.inputs.btnProgressColor;
     
