@@ -58,6 +58,7 @@ class GetPOService extends Service {
     this.stationFilters = [this.stationFilter];
     console.log(this.stationFilter.parse());
     this.stationQueryParam = new QueryParams(globalVars.partnerURL, tableCodes["config.stations"], this.stationFilters);
+    console.log(this.stationQueryParam.parse());
     this.response = await callAPI2(this.stationQueryParam)
     this.resData = await this.response.json();
     console.log("station response: ", this.resData);

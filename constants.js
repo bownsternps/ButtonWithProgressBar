@@ -109,6 +109,7 @@ const FunctionTypes = {
     }
   };
   async function callAPI2(queryParams) {
+    console.log("@callAPI2");
     let myHeaders = new Headers();
     myHeaders.append("Accept", "application/json");
     myHeaders.append("Authorization", globalVars.authorizationBasic);
@@ -133,8 +134,8 @@ const FunctionTypes = {
     var response;
     try {
       response = await fetch(myRequest, myInit);
-    } catch (error) {
-      fireEvent("Error", error)
+    } catch (error) {  
+      fireEvent("Error", error.message)
     }
   
     return response;
