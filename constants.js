@@ -6,13 +6,6 @@ const inputParamsNames = {
     "serviceID": "serviceID",
 }
 
-const globalVars = {
-  "partnerURL": "https://partner-bns.tulip.co/api/v3/",
-  "tables": "tables/",
-  "authorizationBasic": "Basic YXBpa2V5LjJfQlJkeGdjTjRKV0VCZHBLS3A6bTNHUzVQU1djOGRXZHROTlZlcEVNbHd4QUE1UW5WeTdmakdiZTFfVno4Mw==",
-  "queryConst": "/records"
-
-}
 
 const tableCodes = {
   "config.services": "kSS2bmzT46FxMkvuo",
