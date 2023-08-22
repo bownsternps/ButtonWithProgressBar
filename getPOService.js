@@ -192,8 +192,8 @@ class GetPOService extends Service {
     // }
 
     } catch (error) {
-      console.log("error => ", err.message);
-      fireEvent("error",err.message);
+      console.log("error => ", error.message);
+      fireEvent("error",error.message);
     }
 
     
