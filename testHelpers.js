@@ -11,7 +11,7 @@ function getValue(prop) {
             return { "id": "iJqBRzjCHSXEyDTXx" };
             break;
         case 'title':
-            return "This is a placeholder"
+            return "Get Process Orders"
             break;
         case 'btnBackgroundColor':
             return "#729B79";
